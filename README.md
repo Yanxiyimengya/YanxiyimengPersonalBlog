@@ -1,10 +1,10 @@
 # 忆梦的个人博客站点
 
-[![License](https://img.shields.io/github/license/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square)](LICENSE)
-[![VitePress](https://img.shields.io/badge/基于-VitePress-646CFF.svg?style=flat-square)](https://vitepress.dev/)
-[![Bilibili](https://img.shields.io/badge/Bilibili-烟汐忆梦_YM-FF8800.svg?style=flat-square)](https://space.bilibili.com/481430814)
-[![GitHub Stars](https://img.shields.io/github/stars/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square&label=收藏)](https://github.com/Yanxiyimengya/YanxiyimengPersonalBlog/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square&label=问题)](https://github.com/Yanxiyimengya/YanxiyimengPersonalBlog/issues)
+[![License](https://img.shields.io/github/license/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square&cache=20260513)](LICENSE)
+[![VitePress](https://img.shields.io/badge/基于-VitePress-646CFF.svg?style=flat-square&cache=20260513)](https://vitepress.dev/)
+[![Bilibili](https://img.shields.io/badge/Bilibili-烟汐忆梦_YM-FF8800.svg?style=flat-square&cache=20260513)](https://space.bilibili.com/481430814)
+[![GitHub Stars](https://img.shields.io/github/stars/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square&label=收藏&cache=20260513)](https://github.com/Yanxiyimengya/YanxiyimengPersonalBlog/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/Yanxiyimengya/YanxiyimengPersonalBlog.svg?style=flat-square&label=问题&cache=20260513)](https://github.com/Yanxiyimengya/YanxiyimengPersonalBlog/issues)
 
 个人技术博客项目，用来沉淀日常开发记录、技术文章、专题笔记以及个人创作相关内容。
 
