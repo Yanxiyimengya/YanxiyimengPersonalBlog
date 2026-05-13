@@ -51,8 +51,8 @@ function selectTopic(topic: string) {
       <div class="space-panel">
         <div class="space-content__header">
           <div class="space-content__tabs">
-            <span class="space-content__tab active">全部文章</span>
-            <span class="space-content__tab">{{ activeTopic }}</span>
+            <span class="space-content__tab active">{{ activeTopic }}</span>
+            <!-- <span class="space-content__tab">{{ activeTopic }}</span> -->
           </div>
 
           <div class="space-content__summary">
