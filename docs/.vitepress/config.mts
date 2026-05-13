@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/YanxiyimengPersonalBlog/',
   srcDir: 'src',
   title: '忆梦的博客',
   description: '忆梦的个人技术博客',
