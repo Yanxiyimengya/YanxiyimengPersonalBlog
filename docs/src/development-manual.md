@@ -78,6 +78,10 @@ head:
 import profilePhoto from '../../../img/profile photo.jpg'
 ```
 
+### 修改Banner
+
+Banner 图像位于 `docs\img\banner.jpg` 只需要将图像放置在此目录即可。
+
 ### 添加主页的分栏页
 
 你可以找到页面上方的 `tabs` 常量数组，这里定义了主页的分栏子页，只需要添加一行关于页面的配置。

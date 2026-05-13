@@ -63,12 +63,18 @@
 
 .space-banner__cover {
   height: var(--ym-banner-bg-height);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background:
+    url("../../img/banner.jpg") center/cover no-repeat,
     linear-gradient(135deg, rgba(66, 184, 131, 0.14), transparent 42%),
     linear-gradient(180deg, #d8eef7 0%, #cfe5f4 100%);
 }
+
 .dark .space-banner__cover {
   background:
+    url("../../img/banner.jpg") center/cover no-repeat,
     linear-gradient(135deg, rgba(66, 184, 131, 0.18), transparent 42%),
     linear-gradient(180deg, #24313a 0%, #1b252d 100%);
 }

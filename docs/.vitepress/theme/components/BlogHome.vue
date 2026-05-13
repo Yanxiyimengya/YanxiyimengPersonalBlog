@@ -20,7 +20,6 @@ const topicCount = computed(() => new Set(posts.map((post) => post.topic)).size)
   <div class="blog-home bili-style-home">
     <section class="space-banner">
       <div class="space-banner__cover"></div>
-
       <div class="space-profile">
         <div class="space-profile__avatar">
           <img :src="profilePhoto" alt="头像" class="space-profile__avatar-image" />

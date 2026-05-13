@@ -110,7 +110,7 @@ export default createContentLoader('**/*.md', {
         const topic = (frontmatter.topic ?? {}) as PostTopic
 
         return {
-          title: String(frontmatter.title ?? page.title ?? 'Untitled Post'),
+          title: String(frontmatter.title ?? page.title ?? '未命名文章'),
           url: page.url,
           sourcePath: getSourcePath(page.url),
           topic: String(topic.name ?? '未分类'),
