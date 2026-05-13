@@ -2,10 +2,12 @@
 import { computed, ref } from 'vue'
 import { data as posts } from '../posts.data'
 import HomeBlogTab from './home/HomeBlogTab.vue'
+import HomeAboutTab from './home/HomeAboutTab.vue'
 import profilePhoto from '../../../img/profile photo.jpg'
 
 const tabs = [
   { key: 'blog', label: '博客', component: HomeBlogTab },
+  { key: 'about', label: '关于', component: HomeAboutTab },
 ] as const
 
 type HomeTabKey = (typeof tabs)[number]['key']
