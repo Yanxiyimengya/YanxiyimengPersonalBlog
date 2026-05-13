@@ -7,8 +7,8 @@
   --ym-text-1: #18191c;
   --ym-text-2: #61666d;
   --ym-accent: var(--vp-c-brand-1);
+  --ym-banner-bg-height: 120px;
 }
-
 .dark {
   --ym-page-bg: #141414;
   --ym-surface: #1f2023;
@@ -62,12 +62,11 @@
 }
 
 .space-banner__cover {
-  height: 100px;
+  height: var(--ym-banner-bg-height);
   background:
     linear-gradient(135deg, rgba(66, 184, 131, 0.14), transparent 42%),
     linear-gradient(180deg, #d8eef7 0%, #cfe5f4 100%);
 }
-
 .dark .space-banner__cover {
   background:
     linear-gradient(135deg, rgba(66, 184, 131, 0.18), transparent 42%),

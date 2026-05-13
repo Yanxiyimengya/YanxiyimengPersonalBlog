@@ -4,6 +4,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import ArticlePager from './components/ArticlePager.vue'
 import './style.css'
+import './dark.css'
+import './light.css'
 
 export default {
   extends: DefaultTheme,
