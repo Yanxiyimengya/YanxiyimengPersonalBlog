@@ -4,6 +4,7 @@ export type PostItem = {
   sourcePath: string
   topic: string
   topicDescription: string
+  orderIndex: number | null
   date: string
   sortDate: number
   summary: string
@@ -49,6 +50,25 @@ export function filterPostsByTopic(items: PostItem[], topic: string, allTopicNam
   return items.filter((post) => post.topic === topic)
 }
 
+export function comparePosts(a: PostItem, b: PostItem) {
+  const aHasIndex = a.orderIndex !== null
+  const bHasIndex = b.orderIndex !== null
+
+  if (aHasIndex && bHasIndex && a.orderIndex !== b.orderIndex) {
+    return a.orderIndex! - b.orderIndex!
+  }
+
+  if (aHasIndex !== bHasIndex) {
+    return aHasIndex ? -1 : 1
+  }
+
+  if (a.sortDate !== b.sortDate) {
+    return a.sortDate - b.sortDate
+  }
+
+  return decodeURI(a.url).localeCompare(decodeURI(b.url), 'zh-CN', { numeric: true })
+}
+
 export function getTopicPager(items: PostItem[], sourcePath: string) {
   const currentPost = items.find((post) => post.sourcePath === sourcePath)
 
@@ -59,7 +79,7 @@ export function getTopicPager(items: PostItem[], sourcePath: string) {
     }
   }
 
-  const topicPosts = items.filter((post) => post.topic === currentPost.topic)
+  const topicPosts = items.filter((post) => post.topic === currentPost.topic).sort(comparePosts)
   const currentIndex = topicPosts.findIndex((post) => post.sourcePath === sourcePath)
 
   return {

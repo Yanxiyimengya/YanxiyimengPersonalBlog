@@ -16,6 +16,8 @@ topic:
 
 因此我搭建了这个 **个人博客**，用于技术分享。
 
+本博客的代码骨架依赖 [YmBlog](https://github.com/Yanxiyimengya/YmBlog/)
+
 ## 文档项目技术栈的选择
 
 最早我在处理项目文档编写的需求时接触到 docsify 这个框架。
@@ -61,26 +63,31 @@ head:
 
 对于页面的**布局修改**和**文章编写**，推荐使用不同的两个开发分支。
 
-若需要预览项目，可以找到仓库目录 `scripts\start.bat` 运行这个批处理文件启动项目。
+若需要预览项目，可以找到仓库目录 `scripts/start.bat` 运行这个批处理文件启动项目。
 
-若需要清除构建的缓存页面，可以运行 `scripts\clear.bat`。
+若需要清除构建的缓存页面，可以运行 `scripts/clear.bat`。
 
 ## 主页样式修改
 
-你可以在位于仓库目录下的 `docs\.vitepress\theme\components\BlogHome.vue` 找到主页的 `vue` 样式。
+你可以在位于仓库目录下的 `docs/.vitepress/theme/components/BlogHome.vue` 找到主页的 `vue` 样式。
 
 ### 修改头像
 
-头像位于 `docs\img\profile photo.jpg` 按照源目录替换即可。
-也可以直接并修改找到页面上方的 `import` 导入路径。
+头像位于 `docs/img/profile-photo.png` 按照源目录替换即可。
+
+### 修改Banner背景
+
+Banner 图像位于 `docs/img/banner.jpg` 只需要将图像放置在此目录即可。
+
+### 修改网站图标
+
+图标的图像位于 `docs/public/icon.svg` 只需要将图像放置在此目录即可。
+
+你也可以在 `docs/.vitepress/config.mts` 配置文件顶部修改 `icon` 字段。
 
 ```ts
-import profilePhoto from '../../../img/profile photo.jpg'
+const icon = 'icon.svg'
 ```
-
-### 修改Banner
-
-Banner 图像位于 `docs\img\banner.jpg` 只需要将图像放置在此目录即可。
 
 ### 添加主页的分栏页
 
@@ -96,7 +103,7 @@ const tabs = [
 
 - `key` 是这个子页的 `标识符`。
 - `label` 是这个分栏显示的文本。
-- `component` 是对应子页的 `.vue` 页面，需要将对应页面放到 `docs\.vitepress\theme\components\home\` 下。
+- `component` 是对应子页的 `.vue` 页面，需要将对应页面放到 `docs/.vitepress/theme/components/home/` 下。
 
 比如，你可以编写一个引导器页面，用MD文档编写内容。
 

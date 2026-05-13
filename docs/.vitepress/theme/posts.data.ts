@@ -1,5 +1,5 @@
 import { createContentLoader } from 'vitepress'
-import type { PostItem } from './utils/posts'
+import { comparePosts, type PostItem } from './utils/posts'
 
 type PostTopic = {
   name?: string
@@ -23,6 +23,21 @@ function getSortDateValue(value: unknown) {
   }
 
   return 0
+}
+
+function getOrderIndexValue(value: unknown) {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return value
+  }
+
+  if (typeof value === 'string') {
+    const parsed = Number(value.trim())
+    if (Number.isFinite(parsed)) {
+      return parsed
+    }
+  }
+
+  return null
 }
 
 function formatPostDate(value: unknown) {
@@ -115,6 +130,7 @@ export default createContentLoader('**/*.md', {
           sourcePath: getSourcePath(page.url),
           topic: String(topic.name ?? '未分类'),
           topicDescription: String(topic.description ?? ''),
+          orderIndex: getOrderIndexValue(frontmatter.index),
           date: formatPostDate(frontmatter.date),
           sortDate: getSortDateValue(frontmatter.date),
           summary: String(frontmatter.summary ?? page.excerpt ?? '')
@@ -126,8 +142,9 @@ export default createContentLoader('**/*.md', {
         } satisfies PostItem
       })
       .sort((a, b) => {
-        if (b.sortDate !== a.sortDate) {
-          return b.sortDate - a.sortDate
+        const ordered = comparePosts(a, b)
+        if (ordered !== 0) {
+          return ordered
         }
 
         const aRank = getCopyRank(a.url)

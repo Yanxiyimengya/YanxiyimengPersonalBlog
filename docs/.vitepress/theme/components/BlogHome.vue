@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { data as posts } from '../posts.data'
+const profilePhoto = Object.values(import.meta.glob('../../../img/profile-photo.*', {
+  eager: true,
+  import: 'default'
+}))[0] as string
+
 import HomeBlogTab from './home/HomeBlogTab.vue'
-import profilePhoto from '../../../img/profile photo.jpg'
 
 const name = "烟汐忆梦_YM"
 const bio = "喜欢计算机技术，喜欢游戏 XD"
@@ -10,10 +14,11 @@ const keyword = [
   "技术博客",
 ] as const
 
+const defaultTab = 'blog'
 const tabs = [
   { key: 'blog', label: '博客', component: HomeBlogTab },
 ] as const
-const defaultTab = 'blog'
+
 
 type HomeTabKey = (typeof tabs)[number]['key']
 
