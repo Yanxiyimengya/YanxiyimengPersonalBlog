@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
-const base = ''
+const base = '/YanxiyimengPersonalBlog/'
 const icon = 'icon.svg'
 const githubUrl = ''
 
